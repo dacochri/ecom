@@ -1,0 +1,110 @@
+$small: 0.5rem;
+$medium: 1rem;
+$large: 2rem;
+
+$title-font: "Trade Winds", serif;
+$body-font: "Alegreya Sans", Arial, Helvetica, sans-serif;
+
+$main-color: #DD3737;
+
+@import url(//fonts.googleapis.com/css?family=Trade+Winds);
+@import url(//fonts.googleapis.com/css?family=Alegreya+Sans);
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: $body-font;
+  font-size: 1.8rem;
+  
+  & > div{
+    width: 102.4rem;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+div, p, ul{
+  margin: $small;
+  padding: $small;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: $small;
+}
+
+ul{
+  
+  li{
+    list-style-type: disc;
+  }
+}
+
+ol{
+  
+  li{
+    list-style-type: decimal;
+  }
+}
+
+header, footer{
+  background-color: #2D2D2D;
+
+  a{
+    text-decoration: none;
+    
+    &:link, &:visited{
+      color: #616161;
+    }
+
+    &:hover, &:active, &:focus{
+      color: $main-color;
+    }
+  }
+}
+
+header, #content, footer{
+  padding: $small;
+}
+
+header{
+  background-color: #2D2D2D;
+  
+  h1{
+    color: $main-color;
+    font-size: 4rem;
+    font-family: $title-font;
+    display: inline;
+  }
+
+  nav{
+    display: inline;
+    
+    ul{
+      display: inline;
+
+      li{
+        display: inline;
+        margin-right: $small;
+
+        &:last{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+#content{
+
+}
+
+footer{
+
+}
