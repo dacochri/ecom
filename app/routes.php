@@ -1,17 +1,28 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
+# Base (index, contact, about, etc.)
+Route::get('/', 'MainController@index');
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+# Products
+Route::get('/products', 'ProductsController@index');
+Route::get('/products/show/{id}', 'ProductsController@showProduct');
+Route::get('/products/new', 'ProductsController@newProduct');
+Route::get('/products/edit', 'ProductsController@editProduct');
+Route::post('/products/create', 'ProductsController@createProduct');
+Route::post('/products/update', 'ProductsController@updateProduct');
+Route::get('/products/destroy/{id}', 'ProductsController@destroyProduct');
+
+# Categories
+Route::get('/categories', 'CategoriesController@index');
+Route::get('/categories/show/{id}', 'CategoriesController@showCategory');
+Route::get('/categories/new', 'CategoriesController@newCategory');
+Route::get('/categories/edit', 'CategoriesController@editCategory');
+Route::post('/categories/create', 'CategoriesController@createCategory');
+Route::post('/categories/update', 'CategoriesController@updateCategory');
+Route::get('/categories/destroy/{id}', 'CategoriesController@destroyCategory');
+
+# Discounts
+
+# Comments
+
+# Users
