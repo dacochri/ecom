@@ -8,29 +8,27 @@ class ProductsController extends BaseController{
   }
 
   public function show($products){
-    $product = Product::find($products)
+    $product = Product::find($products);
     return View::make('products/show')->with('product', $product);
   }
 
   public function create(){
-    return View::make('products/new');
+    return View::make('products/create');
   }
 
   public function edit($products){
-    $product = Product::find($products)
+    $product = Product::find($products);
     return View::make('products/edit')->with('product', $product);
   }
 
   public function store(){
     Product::create(Input::all());
-
     return Redirect::route('products.index');
   }
 
   public function update($products){
     $product = Product::find($products);
     $product->create(Input::all());
-    
     return Redirect::route('products.index');
   }
 
@@ -38,7 +36,6 @@ class ProductsController extends BaseController{
     $product = Product::find($products);
     $product->delete();
     # Product::find($id)->delete();
-    
     return Redirect::route('products.index');
   }
 }
