@@ -23,24 +23,22 @@ class ProductsController extends BaseController{
 
   public function store(){
     Product::create([
-      'category_id' => $_POST['category_id'],
-      'name' => $_POST['name'],
-      'price' => $_POST['price'],
-      'manufacturer' => $_POST['price'],
-      'quantity' => $_POST['quantity'],
-      'date_added' => date('Y-m-d h:i:s'),
-      'description' => $_POST['description']
+      'category_id' => Input::get('category_id'),
+      'name' => Input::get('name'),
+      'price' => Input::get('price'),
+      'manufacturer' => Input::get('price'),
+      'quantity' => Input::get('quantity'),
+      'description' => Input::get('description')
     ]);
   }
 
   public function update($products){
     $product = Product::find($products);
-    $product->category_id = $_POST['category_id'];
-    $product->name = $_POST['name'];
-    $product->manufacturer = $_POST['manufacturer'];
-    $product->quantity = $_POST['quantity'];
-    $product->date_added = $_POST['date_added'];
-    $product->description = $_POST['description'];
+    $product->category_id = Input::get('category_id');
+    $product->name = Input::get('name';
+    $product->manufacturer = Input::get('manufacturer');
+    $product->quantity = Input::get('quantity');
+    $product->description = Input::get('description');
     $product->save();
   }
 

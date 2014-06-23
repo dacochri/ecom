@@ -23,15 +23,15 @@ class CategoriesController extends BaseController{
 
   public function store(){
     Category::create([
-      'category_id' => $_POST['category_id'],
-      'name' => $_POST['name'],
+      'category_id' => Input::get('category_id'),
+      'name' => Input::get('name'),
     ]);
   }
 
   public function update($categories){
     $category = Category::find($categories);
-    $category->category_id = $_POST['category_id'];
-    $category->name = $_POST['name'];
+    $category->category_id = Input::get('category_id');
+    $category->name = Input::get('name');
     $category->save();
   }
 
