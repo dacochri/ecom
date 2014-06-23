@@ -7,7 +7,7 @@ class ProductsController extends BaseController{
     return View::make('products/index')->with('products', $products);
   }
 
-  public function showProduct(){
+  public function showProduct($id){
     $product = Product::find($id)
     return View::make('products/show')->with('product', $product);
   }
@@ -16,7 +16,7 @@ class ProductsController extends BaseController{
     return View::make('products/new');
   }
 
-  public function editProduct(){
+  public function editProduct($id){
     $product = Product::find($id)
     return View::make('products/edit')->with('product', $product);
   }
@@ -33,11 +33,20 @@ class ProductsController extends BaseController{
     ]);
   }
 
-  public function updateProduct(){
-
+  public function updateProduct($id){
+    $product = Product::find($id);
+    $product->category_id = $_POST['category_id'];
+    $product->name = $_POST['name'];
+    $product->manufacturer = $_POST['manufacturer'];
+    $product->quantity = $_POST['quantity'];
+    $product->date_added = $_POST['date_added'];
+    $product->description = $_POST['description'];
+    $product->save();
   }
 
-  public function destroyProduct(){
-
+  public function destroyProduct($id){
+    $product = Product::find($id);
+    $product->delete();
+    # Product::find($id)->delete();
   }
 }
