@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>eCom</title>
-    <link href="css/main.css" rel="stylesheet"/>
+    {{ HTML::style('css/main.css') }}
     <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script src="/js/main.js"></script>
+    {{ HTML::script('js/main.js') }}
   </head>
   <body>
     <div>
@@ -26,5 +26,5 @@
         <p>&copy; 2014 <span class="logo"><span class="accent">e</span>Com</span></p>
       </footer>
     </div>
-  </body
+  </body>
 </html>
