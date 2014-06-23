@@ -30,6 +30,8 @@ class ProductsController extends BaseController{
       'quantity' => Input::get('quantity'),
       'description' => Input::get('description')
     ]);
+
+    return Redirect::route('products.index');
   }
 
   public function update($products){
@@ -40,11 +42,15 @@ class ProductsController extends BaseController{
     $product->quantity = Input::get('quantity');
     $product->description = Input::get('description');
     $product->save();
+
+    return Redirect::route('products.index');
   }
 
   public function destroy($products){
     $product = Product::find($products);
     $product->delete();
     # Product::find($id)->delete();
+    
+    return Redirect::route('products.index');
   }
 }

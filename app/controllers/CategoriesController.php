@@ -26,6 +26,8 @@ class CategoriesController extends BaseController{
       'category_id' => Input::get('category_id'),
       'name' => Input::get('name'),
     ]);
+
+    return Redirect::route('categories.index');
   }
 
   public function update($categories){
@@ -33,11 +35,15 @@ class CategoriesController extends BaseController{
     $category->category_id = Input::get('category_id');
     $category->name = Input::get('name');
     $category->save();
+
+    return Redirect::route('categories.index');
   }
 
   public function destroy($categories){
     $category = Category::find($categories);
     $category->delete();
     # Category::find($categories)->delete();
+
+    return Redirect::route('categories.index');
   }
 }
