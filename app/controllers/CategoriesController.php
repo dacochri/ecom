@@ -22,10 +22,10 @@ class CategoriesController extends BaseController{
   }
 
   public function createCategory(){
-    $category = new Category;
-    $category->category_id = $_POST['category_id'];
-    $category->name = $_POST['name'];
-    $category->save();
+    Category::create([
+      'category_id' => $_POST['category_id'],
+      'name' => $_POST['name'],
+    ]);
   }
 
   public function updateCategory){

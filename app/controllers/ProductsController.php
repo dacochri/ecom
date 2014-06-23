@@ -22,15 +22,15 @@ class ProductsController extends BaseController{
   }
 
   public function createProduct(){
-    $product = new Product;
-    $product->category_id = $_POST['category_id'];
-    $product->name = $_POST['name'];
-    $product->price = $_POST['price'];
-    $product->manufacturer = $_POST['price'];
-    $product->quantity = $_POST['quantity'];
-    $product->date_added = date('Y-m-d h:i:s');
-    $product->description = $_POST['description'];
-    $product->save();
+    Product::create([
+      'category_id' => $_POST['category_id'],
+      'name' => $_POST['name'],
+      'price' => $_POST['price'],
+      'manufacturer' => $_POST['price'],
+      'quantity' => $_POST['quantity'],
+      'date_added' => date('Y-m-d h:i:s'),
+      'description' => $_POST['description']
+    ]);
   }
 
   public function updateProduct(){
