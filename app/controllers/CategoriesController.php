@@ -22,19 +22,14 @@ class CategoriesController extends BaseController{
   }
 
   public function store(){
-    Category::create([
-      'category_id' => Input::get('category_id'),
-      'name' => Input::get('name'),
-    ]);
+    Category::create(Input::all());
 
     return Redirect::route('categories.index');
   }
 
   public function update($categories){
     $category = Category::find($categories);
-    $category->category_id = Input::get('category_id');
-    $category->name = Input::get('name');
-    $category->save();
+    $category->create(Input::all());
 
     return Redirect::route('categories.index');
   }

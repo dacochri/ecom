@@ -22,27 +22,15 @@ class ProductsController extends BaseController{
   }
 
   public function store(){
-    Product::create([
-      'category_id' => Input::get('category_id'),
-      'name' => Input::get('name'),
-      'price' => Input::get('price'),
-      'manufacturer' => Input::get('price'),
-      'quantity' => Input::get('quantity'),
-      'description' => Input::get('description')
-    ]);
+    Product::create(Input::all());
 
     return Redirect::route('products.index');
   }
 
   public function update($products){
     $product = Product::find($products);
-    $product->category_id = Input::get('category_id');
-    $product->name = Input::get('name';
-    $product->manufacturer = Input::get('manufacturer');
-    $product->quantity = Input::get('quantity');
-    $product->description = Input::get('description');
-    $product->save();
-
+    $product->create(Input::all());
+    
     return Redirect::route('products.index');
   }
 
