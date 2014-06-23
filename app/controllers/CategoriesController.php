@@ -12,7 +12,7 @@ class CategoriesController extends BaseController{
     return View::make('show')->with('category', $category);
   }
 
-  public function newCategory(){
+  public function createCategory(){
     return View::make('new');
   }
 
@@ -21,7 +21,7 @@ class CategoriesController extends BaseController{
     return View::make('edit')->with('category', $category);
   }
 
-  public function createCategory(){
+  public function storeCategory(){
     Category::create([
       'category_id' => $_POST['category_id'],
       'name' => $_POST['name'],

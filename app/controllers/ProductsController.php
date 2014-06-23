@@ -12,7 +12,7 @@ class ProductsController extends BaseController{
     return View::make('products/show')->with('product', $product);
   }
 
-  public function newProduct(){
+  public function createProduct(){
     return View::make('products/new');
   }
 
@@ -21,7 +21,7 @@ class ProductsController extends BaseController{
     return View::make('products/edit')->with('product', $product);
   }
 
-  public function createProduct(){
+  public function storeProduct(){
     Product::create([
       'category_id' => $_POST['category_id'],
       'name' => $_POST['name'],
