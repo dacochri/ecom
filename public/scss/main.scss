@@ -2,13 +2,18 @@ $small: 0.5rem;
 $medium: 1rem;
 $large: 2rem;
 
-$title-font: "Trade Winds", serif;
+$title-font: "Jolly Lodger", serif;
 $body-font: "Alegreya Sans", Arial, Helvetica, sans-serif;
+$link-font: "Lora", serif;
 
-$main-color: #DD3737;
+// F00 FF4000 FF8000 FFBF00 FF0 BFFF00 80FF00
+// 40FF00 0F0 00FF40 00FF80 00FFBF 0FF 00BFFF
+// 0080FF 0040FF 00F 4000FF 8000FF BF00FF F0F
+$main-color: #8000FF;
 
-@import url(//fonts.googleapis.com/css?family=Trade+Winds);
+@import url(//fonts.googleapis.com/css?family=Jolly+Lodger);
 @import url(//fonts.googleapis.com/css?family=Alegreya+Sans);
+@import url(//fonts.googleapis.com/css?family=Lora);
 
 *{
   margin: 0;
@@ -55,9 +60,11 @@ ol{
 
 header, footer{
   background-color: #2D2D2D;
+  color: #999;
 
   a{
     text-decoration: none;
+    font-family: $link-font;
     
     &:link, &:visited{
       color: #616161;
@@ -81,6 +88,7 @@ header{
     font-size: 4rem;
     font-family: $title-font;
     display: inline;
+    font-weight: normal;
   }
 
   nav{
@@ -88,10 +96,13 @@ header{
     
     ul{
       display: inline;
+      position: relative;
+      top: -1rem;
 
       li{
         display: inline;
-        margin-right: $small;
+        margin-right: $medium;
+        letter-spacing: -0.1rem;
 
         &:last{
           margin-right: 0;
@@ -107,4 +118,16 @@ header{
 
 footer{
 
+}
+
+// General Classes
+
+.accent{
+  color: #FFF;
+}
+
+span.logo{
+  color: $main-color;
+  font-size: 4rem;
+  font-family: $title-font;
 }

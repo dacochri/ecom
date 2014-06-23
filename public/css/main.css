@@ -1,5 +1,6 @@
-@import url(//fonts.googleapis.com/css?family=Trade+Winds);
+@import url(//fonts.googleapis.com/css?family=Jolly+Lodger);
 @import url(//fonts.googleapis.com/css?family=Alegreya+Sans);
+@import url(//fonts.googleapis.com/css?family=Lora);
 
 * {
   margin: 0;
@@ -32,15 +33,17 @@ ol li {
 }
 header, footer {
   background-color: #2d2d2d;
+  color: #999;
 }
 header a, footer a {
   text-decoration: none;
+  font-family: "Lora", serif;
 }
 header a:link, footer a:link, header a:visited, footer a:visited {
   color: #616161;
 }
 header a:hover, footer a:hover, header a:active, footer a:active, header a:focus, footer a:focus {
-  color: #dd3737;
+  color: #8000ff;
 }
 header, #content, footer {
   padding: 0.5rem;
@@ -49,21 +52,33 @@ header {
   background-color: #2d2d2d;
 }
 header h1 {
-  color: #dd3737;
+  color: #8000ff;
   font-size: 4rem;
-  font-family: "Trade Winds", serif;
+  font-family: "Jolly Lodger", serif;
   display: inline;
+  font-weight: normal;
 }
 header nav {
   display: inline;
 }
 header nav ul {
   display: inline;
+  position: relative;
+  top: -1rem;
 }
 header nav ul li {
   display: inline;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
+  letter-spacing: -0.1rem;
 }
 header nav ul li:last {
   margin-right: 0;
+}
+.accent {
+  color: #fff;
+}
+span.logo {
+  color: #8000ff;
+  font-size: 4rem;
+  font-family: "Jolly Lodger", serif;
 }
