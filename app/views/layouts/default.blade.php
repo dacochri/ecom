@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>ecom</title>
+    <title>eCom</title>
     <link href="css/main.css" rel="stylesheet"/>
     <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="/js/main.js"></script>
@@ -10,12 +10,12 @@
   <body>
     <div>
       <header>
-        <h1>ecom</h1>
+        <h1><span class="accent">e</span>Com</h1>
         <nav>
           <ul>
-            <li><a href="/">link 1</a></li>
-            <li><a href="/">link 2</a></li>
-            <li><a href="/">link 3</a></li>
+            <li><a href="/">home</a></li>
+            <li><a href="/">about</a></li>
+            <li><a href="/">contact</a></li>
           </ul>
         </nav>
       </header>
@@ -23,7 +23,7 @@
         @yield('content')
       </div>
       <footer>
-        <p>&copy; 2014 ecom</p>
+        <p>&copy; 2014 <span class="logo"><span class="accent">e</span>Com</span></p>
       </footer>
     </div>
   </body
