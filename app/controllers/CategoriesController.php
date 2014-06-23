@@ -7,35 +7,35 @@ class CategoriesController extends BaseController{
     return View::make('index')->with('categories', $categories);
   }
 
-  public function showCategory($categories){
+  public function show($categories){
     $category = Category::find($categories);
     return View::make('show')->with('category', $category);
   }
 
-  public function createCategory(){
+  public function create(){
     return View::make('new');
   }
 
-  public function editCategory($categories){
+  public function edit($categories){
     $category = Category::find($categories);
     return View::make('edit')->with('category', $category);
   }
 
-  public function storeCategory(){
+  public function store(){
     Category::create([
       'category_id' => $_POST['category_id'],
       'name' => $_POST['name'],
     ]);
   }
 
-  public function updateCategory($categories){
+  public function update($categories){
     $category = Category::find($categories);
     $category->category_id = $_POST['category_id'];
     $category->name = $_POST['name'];
     $category->save();
   }
 
-  public function destroyCategory($categories){
+  public function destroy($categories){
     $category = Category::find($categories);
     $category->delete();
     # Category::find($categories)->delete();

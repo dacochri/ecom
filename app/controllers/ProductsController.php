@@ -7,21 +7,21 @@ class ProductsController extends BaseController{
     return View::make('products/index')->with('products', $products);
   }
 
-  public function showProduct($products){
+  public function show($products){
     $product = Product::find($products)
     return View::make('products/show')->with('product', $product);
   }
 
-  public function createProduct(){
+  public function create(){
     return View::make('products/new');
   }
 
-  public function editProduct($products){
+  public function edit($products){
     $product = Product::find($products)
     return View::make('products/edit')->with('product', $product);
   }
 
-  public function storeProduct(){
+  public function store(){
     Product::create([
       'category_id' => $_POST['category_id'],
       'name' => $_POST['name'],
@@ -33,7 +33,7 @@ class ProductsController extends BaseController{
     ]);
   }
 
-  public function updateProduct($products){
+  public function update($products){
     $product = Product::find($products);
     $product->category_id = $_POST['category_id'];
     $product->name = $_POST['name'];
@@ -44,7 +44,7 @@ class ProductsController extends BaseController{
     $product->save();
   }
 
-  public function destroyProduct($products){
+  public function destroy($products){
     $product = Product::find($products);
     $product->delete();
     # Product::find($id)->delete();
