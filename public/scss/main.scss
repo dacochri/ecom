@@ -33,6 +33,18 @@ body{
     margin: 0 auto;
     padding: 0;
   }
+
+  &.form{
+    background: #3E3E3E url("../img/bg-square.png") repeat top left;
+    
+    h2{
+      margin: 0 0 $large 0;
+      padding: 5rem 0;
+      text-align: center;
+      background: #2D2D2D url("../img/bg-square.png") repeat top left;
+      color: #FFF;
+    }
+  }
 }
 
 div, p, ul{
@@ -42,6 +54,30 @@ div, p, ul{
 
 h1, h2, h3, h4, h5, h6{
   margin: $small;
+}
+
+h1{
+  font-size: 4rem;
+}
+
+h2{
+  font-size: 3.8rem;
+}
+
+h3{
+  font-size: 3.6rem;
+}
+
+h4{
+  font-size: 3.4rem;
+}
+
+h5{
+  font-size: 3.2rem;
+}
+
+h6{
+  font-size: 3rem;
 }
 
 ul{
@@ -85,7 +121,6 @@ header{
   
   h1{
     color: $main-color;
-    font-size: 4rem;
     font-family: $title-font;
     display: inline;
     font-weight: normal;
@@ -114,10 +149,77 @@ header{
 
 #content{
 
+  h2, h3, h4, h5, h6{
+    margin: 0.5rem 0;
+  }
 }
 
 footer{
 
+}
+
+// Form Elements
+
+form{
+  border: 0.1rem solid #AAA;
+  background-color: #F4F4F4;
+  margin: 0 auto;
+  width: 70rem;
+}
+
+label{
+  color: #666;
+  line-height: 1.5;
+  margin-top: 1rem;
+  display: block;
+}
+
+input[type="text"], input[type="number"], input[type="password"], input[type="email"], input[type="file"], select, textarea, label{
+  margin-left: 1.5rem;
+}
+
+input[type="checkbox"]{
+  margin-top: 2rem;
+}
+
+input[type="text"], input[type="number"], input[type="password"], input[type="email"], select, textarea{
+  padding: 0.4rem;
+  border: 0.1rem solid #DDD;
+  box-shadow: 0 0 0.4rem #EEE inset;
+
+  &:hover, &:active, &:focus{
+    border: 0.1rem solid #888;
+  }
+}
+
+input[type="text"], input[type="number"], input[type="password"], input[type="email"], select[size], textarea{
+  width: 30rem;
+}
+
+input[type="submit"], input[type="image"], button{
+  background-color: #ECF0F1;
+  border: 0.1rem solid darken(#FFF, 30%);
+  transition: all 200ms ease-in-out 0s;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem 2.1rem;
+  font-size: 1.8rem;
+  margin: 0;
+
+  &:hover, &:active, &:focus{
+    background-color: #BDC3C7;
+    border: 0.1rem solid darken(#FFF, 50%);
+  }
+}
+
+select{
+  margin-right: 0.5rem;
+}
+
+option{
+  margin: 0.4rem;
+  padding: 0.1rem;
 }
 
 // General Classes
