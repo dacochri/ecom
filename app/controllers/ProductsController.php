@@ -4,21 +4,21 @@ class ProductsController extends BaseController{
   
   public function index(){
     $products = Product::all();
-    return View::make('products/index')->with('products', $products);
+    return View::make('product./index')->with('products', $products);
   }
 
   public function show($products){
     $product = Product::find($products);
-    return View::make('products/show')->with('product', $product);
+    return View::make('products.show')->with('product', $product);
   }
 
   public function create(){
-    return View::make('products/create');
+    return View::make('products.create');
   }
 
   public function edit($products){
     $product = Product::find($products);
-    return View::make('products/edit')->with('product', $product);
+    return View::make('products.edit')->with('product', $product);
   }
 
   public function store(){
