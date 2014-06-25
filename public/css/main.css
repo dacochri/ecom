@@ -110,43 +110,23 @@ form {
   margin: 0 auto;
   width: 70rem;
 }
+label, input, textarea, select {
+  display: block;
+  margin: 1rem;
+  font-size: 2rem;
+}
 label {
   color: #666;
   line-height: 1.5;
-  margin-top: 1rem;
-  display: block;
-}
-input[type="text"], input[type="number"], input[type="password"], input[type="email"], input[type="file"], select, textarea, label {
-  margin-left: 1.5rem;
-}
-input[type="checkbox"] {
-  margin-top: 2rem;
 }
 input[type="text"], input[type="number"], input[type="password"], input[type="email"], select, textarea {
-  padding: 0.4rem;
+  padding: 1rem;
   border: 0.1rem solid #ddd;
   box-shadow: 0 0 0.4rem #eee inset;
+  width: 66rem;
 }
 input[type="text"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="email"]:hover, select:hover, textarea:hover, input[type="text"]:active, input[type="number"]:active, input[type="password"]:active, input[type="email"]:active, select:active, textarea:active, input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
   border: 0.1rem solid #888;
-}
-input[type="text"], input[type="number"], input[type="password"], input[type="email"], select[size], textarea {
-  width: 30rem;
-}
-input[type="submit"], input[type="image"], button {
-  background-color: #ecf0f1;
-  border: 0.1rem solid #b3b3b3;
-  transition: all 200ms ease-in-out 0s;
-  color: #333;
-  cursor: pointer;
-  display: inline-block;
-  padding: 0.5rem 2.1rem;
-  font-size: 1.8rem;
-  margin: 0;
-}
-input[type="submit"]:hover, input[type="image"]:hover, button:hover, input[type="submit"]:active, input[type="image"]:active, button:active, input[type="submit"]:focus, input[type="image"]:focus, button:focus {
-  background-color: #bdc3c7;
-  border: 0.1rem solid #808080;
 }
 select {
   margin-right: 0.5rem;
@@ -154,6 +134,20 @@ select {
 option {
   margin: 0.4rem;
   padding: 0.1rem;
+}
+input[type="submit"], input[type="image"], button {
+  background-color: #ecf0f1;
+  border: 0.1rem solid #b3b3b3;
+  transition: all 200ms ease-in-out 0s;
+  color: #333;
+  cursor: pointer;
+  width: 68rem;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+input[type="submit"]:hover, input[type="image"]:hover, button:hover, input[type="submit"]:active, input[type="image"]:active, button:active, input[type="submit"]:focus, input[type="image"]:focus, button:focus {
+  background-color: #bdc3c7;
+  border: 0.1rem solid #808080;
 }
 .accent {
   color: #fff;

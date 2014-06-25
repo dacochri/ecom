@@ -167,25 +167,22 @@ form{
   width: 70rem;
 }
 
+label, input, textarea, select{
+  display: block;
+  margin: $medium;
+  font-size: 2rem;
+}
+
 label{
   color: #666;
   line-height: 1.5;
-  margin-top: 1rem;
-  display: block;
-}
-
-input[type="text"], input[type="number"], input[type="password"], input[type="email"], input[type="file"], select, textarea, label{
-  margin-left: 1.5rem;
-}
-
-input[type="checkbox"]{
-  margin-top: 2rem;
 }
 
 input[type="text"], input[type="number"], input[type="password"], input[type="email"], select, textarea{
-  padding: 0.4rem;
+  padding: $medium;
   border: 0.1rem solid #DDD;
   box-shadow: 0 0 0.4rem #EEE inset;
+  width: 66rem;
 
   &:hover, &:active, &:focus{
     border: 0.1rem solid #888;
@@ -193,26 +190,19 @@ input[type="text"], input[type="number"], input[type="password"], input[type="em
 }
 
 input[type="text"], input[type="number"], input[type="password"], input[type="email"], select[size], textarea{
-  width: 30rem;
+  
 }
 
-input[type="submit"], input[type="image"], button{
-  background-color: #ECF0F1;
-  border: 0.1rem solid darken(#FFF, 30%);
-  transition: all 200ms ease-in-out 0s;
-  color: #333;
-  cursor: pointer;
-  display: inline-block;
-  padding: 0.5rem 2.1rem;
-  font-size: 1.8rem;
-  margin: 0;
-
-  &:hover, &:active, &:focus{
-    background-color: #BDC3C7;
-    border: 0.1rem solid darken(#FFF, 50%);
-  }
+// Textboxes
+input[type="text"], input[type="number"], input[type="password"], input[type="email"]{
+  
 }
 
+input[type="checkbox"]{
+  
+}
+
+// Dropdowns
 select{
   margin-right: 0.5rem;
 }
@@ -220,6 +210,24 @@ select{
 option{
   margin: 0.4rem;
   padding: 0.1rem;
+}
+
+// Buttons
+input[type="submit"], input[type="image"], button{
+  background-color: #ECF0F1;
+  border: 0.1rem solid darken(#FFF, 30%);
+  transition: all 200ms ease-in-out 0s;
+  color: #333;
+  cursor: pointer;
+  width: 68rem;
+  padding: $medium 0;
+  margin-top: $large;
+
+
+  &:hover, &:active, &:focus{
+    background-color: #BDC3C7;
+    border: 0.1rem solid darken(#FFF, 50%);
+  }
 }
 
 // General Classes
