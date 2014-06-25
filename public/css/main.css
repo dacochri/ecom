@@ -149,6 +149,30 @@ input[type="submit"]:hover, input[type="image"]:hover, button:hover, input[type=
   background-color: #bdc3c7;
   border: 0.1rem solid #808080;
 }
+table {
+  border-top: 0.1rem solid #ccc;
+  border-bottom: 0.1rem solid #ccc;
+  border-collapse: collapse;
+  color: #444;
+  margin: 2rem 0;
+  text-align: left;
+  width: 100%;
+}
+table thead {
+  border-bottom: 0.2rem solid #000;
+  color: #000;
+}
+table tbody tr {
+  border-top: 0.1rem solid #ccc;
+}
+table tbody tr:hover, table tbody tr:active, table tbody tr:focus {
+  background-color: #e6e6e6;
+}
+table th, table td {
+  line-height: 1.5rem;
+  padding: 1.5rem;
+  vertical-align: center;
+}
 .accent {
   color: #fff;
 }

@@ -230,6 +230,40 @@ input[type="submit"], input[type="image"], button{
   }
 }
 
+// Tables
+
+table{
+  border-top: 0.1rem solid #CCC;
+  border-bottom: 0.1rem solid #CCC;
+  border-collapse: collapse;
+  color: #444;
+  margin: $large 0;
+  text-align: left;
+  width: 100%;
+
+  thead{
+    border-bottom: 0.2rem solid #000;
+    color: #000;
+  }
+
+  tbody{
+    
+    tr{
+      border-top: 0.1rem solid #CCC;
+
+      &:hover, &:active, &:focus{
+        background-color: darken(#FFF, 10%);
+      }
+    }
+  }
+
+  th, td{
+    line-height: 1.5rem;
+    padding: 1.5rem;
+    vertical-align: center;
+  }
+}
+
 // General Classes
 
 .accent{
