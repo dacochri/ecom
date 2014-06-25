@@ -4,33 +4,32 @@ class CategoriesController extends BaseController{
   
   public function index(){
     $categories = Category::all();
-    return View::make('index')->with('categories', $categories);
+    return View::make('categories.index')->with('categories', $categories);
   }
 
   public function show($categories){
     $category = Category::find($categories);
-    return View::make('show')->with('category', $category);
+    return View::make('categories.show')->with('category', $category);
   }
 
   public function create(){
-    return View::make('new');
+    $categories = Category::all();
+    return View::make('categories.create');
   }
 
   public function edit($categories){
     $category = Category::find($categories);
-    return View::make('edit')->with('category', $category);
+    return View::make('categories.edit')->with('category', $category);
   }
 
   public function store(){
     Category::create(Input::all());
-
     return Redirect::route('categories.index');
   }
 
   public function update($categories){
     $category = Category::find($categories);
     $category->create(Input::all());
-
     return Redirect::route('categories.index');
   }
 
@@ -38,7 +37,6 @@ class CategoriesController extends BaseController{
     $category = Category::find($categories);
     $category->delete();
     # Category::find($categories)->delete();
-
     return Redirect::route('categories.index');
   }
 }
