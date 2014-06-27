@@ -71,7 +71,7 @@ header a:link, footer a:link, header a:visited, footer a:visited {
   color: #616161;
 }
 header a:hover, footer a:hover, header a:active, footer a:active, header a:focus, footer a:focus {
-  color: #8000ff;
+  color: #ffbf00;
 }
 header, #content, footer {
   padding: 0.5rem;
@@ -80,7 +80,7 @@ header {
   background-color: #2d2d2d;
 }
 header h1 {
-  color: #8000ff;
+  color: #ffbf00;
   font-family: "Jolly Lodger", serif;
   display: inline;
   font-weight: normal;
@@ -103,6 +103,18 @@ header nav ul li:last {
 }
 #content h2, #content h3, #content h4, #content h5, #content h6 {
   margin: 0.5rem 0;
+}
+#content a {
+  display: inline-block;
+  background-color: #333;
+  padding: 0.25rem;
+  text-decoration: none;
+}
+#content a:link, #content a:visited {
+  color: #ffbf00;
+}
+#content a:hover, #content a:active, #content a:focus {
+  color: #999;
 }
 form {
   border: 0.1rem solid #aaa;
@@ -177,7 +189,7 @@ table th, table td {
   color: #fff;
 }
 span.logo {
-  color: #8000ff;
+  color: #ffbf00;
   font-size: 4rem;
   font-family: "Jolly Lodger", serif;
 }

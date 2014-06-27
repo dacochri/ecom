@@ -9,7 +9,8 @@ $link-font: "Lora", serif;
 // F00 FF4000 FF8000 FFBF00 FF0 BFFF00 80FF00
 // 40FF00 0F0 00FF40 00FF80 00FFBF 0FF 00BFFF
 // 0080FF 0040FF 00F 4000FF 8000FF BF00FF F0F
-$main-color: #8000FF;
+$main-color: #FFBF00;
+$main-color-on-white: darken($main-color, 0%);
 
 @import url(//fonts.googleapis.com/css?family=Jolly+Lodger);
 @import url(//fonts.googleapis.com/css?family=Alegreya+Sans);
@@ -151,6 +152,21 @@ header{
 
   h2, h3, h4, h5, h6{
     margin: 0.5rem 0;
+  }
+
+  a{
+    display: inline-block;
+    background-color: #333;
+    padding: $small - 0.25rem;
+    text-decoration: none;
+
+    &:link, &:visited{
+      color: $main-color;
+    }
+
+    &:hover, &:active, &:focus{
+      color: #999;
+    }
   }
 }
 
