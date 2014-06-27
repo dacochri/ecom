@@ -22,8 +22,11 @@
           @endif
           <td>{{ $category->name }}</td>
           <td>
-            <a href="categories/{{ $category->id }}/edit">E</a>
-            <a href="categories/{{ $category->id }}" data-method="DELETE">D</a>
+            <a href="categories/{{ $category->id }}/edit">Edit</a>
+            {{ Form::open(['url' => "categories/$category->id", 'class' => 'delete-form']) }}
+              {{ Form::hidden('_method', 'DELETE') }}
+              {{ Form::submit('Delete') }}
+            {{ Form::close() }}
           </td>
         </tr>
       @endforeach
