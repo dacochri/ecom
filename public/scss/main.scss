@@ -160,6 +160,8 @@ footer{
 
 // Form Elements
 
+$form-elements-width: 64rem;
+
 form{
   border: 0.1rem solid #AAA;
   background-color: #F4F4F4;
@@ -169,8 +171,9 @@ form{
 
 label, input, textarea, select{
   display: block;
-  margin: $medium;
+  margin: $large;
   font-size: 2rem;
+  width: $form-elements-width;
 }
 
 label{
@@ -182,7 +185,6 @@ input[type="text"], input[type="number"], input[type="password"], input[type="em
   padding: $medium;
   border: 0.1rem solid #DDD;
   box-shadow: 0 0 0.4rem #EEE inset;
-  width: 66rem;
 
   &:hover, &:active, &:focus{
     border: 0.1rem solid #888;
@@ -219,10 +221,9 @@ input[type="submit"], input[type="image"], button{
   transition: all 200ms ease-in-out 0s;
   color: #333;
   cursor: pointer;
-  width: 68rem;
-  padding: $medium 0;
+  padding: $medium;
   margin-top: $large;
-
+  width: $form-elements-width + 2rem;
 
   &:hover, &:active, &:focus{
     background-color: #BDC3C7;

@@ -112,8 +112,9 @@ form {
 }
 label, input, textarea, select {
   display: block;
-  margin: 1rem;
+  margin: 2rem;
   font-size: 2rem;
+  width: 64rem;
 }
 label {
   color: #666;
@@ -123,7 +124,6 @@ input[type="text"], input[type="number"], input[type="password"], input[type="em
   padding: 1rem;
   border: 0.1rem solid #ddd;
   box-shadow: 0 0 0.4rem #eee inset;
-  width: 66rem;
 }
 input[type="text"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="email"]:hover, select:hover, textarea:hover, input[type="text"]:active, input[type="number"]:active, input[type="password"]:active, input[type="email"]:active, select:active, textarea:active, input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
   border: 0.1rem solid #888;
@@ -141,9 +141,9 @@ input[type="submit"], input[type="image"], button {
   transition: all 200ms ease-in-out 0s;
   color: #333;
   cursor: pointer;
-  width: 68rem;
-  padding: 1rem 0;
+  padding: 1rem;
   margin-top: 2rem;
+  width: 66rem;
 }
 input[type="submit"]:hover, input[type="image"]:hover, button:hover, input[type="submit"]:active, input[type="image"]:active, button:active, input[type="submit"]:focus, input[type="image"]:focus, button:focus {
   background-color: #bdc3c7;
