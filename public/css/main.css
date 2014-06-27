@@ -185,6 +185,26 @@ table th, table td {
   padding: 1.5rem;
   vertical-align: center;
 }
+.delete-form {
+  background-color: none;
+  border: none;
+  display: inline;
+}
+.delete-form input[type="submit"] {
+  background-color: none;
+  border: none;
+  transition: none;
+  color: #000;
+  padding: 0.25rem;
+  margin: 0;
+  width: auto;
+  font-size: 1.4rem;
+  display: inline;
+}
+.delete-form input[type="submit"]:hover, .delete-form input[type="submit"]:active, .delete-form input[type="submit"]:focus {
+  background-color: none;
+  border: none;
+}
 .accent {
   color: #fff;
 }

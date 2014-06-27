@@ -281,6 +281,29 @@ table{
   }
 }
 
+.delete-form{
+  background-color: none;
+  border: none;
+  display: inline;
+
+  input[type="submit"]{
+    background-color: none;
+    border: none;
+    transition: none;
+    color: #000;
+    padding: $small - 0.25rem;
+    margin: 0;
+    width: auto;
+    font-size: 1.4rem;
+    display: inline;
+    
+    &:hover, &:active, &:focus{
+      background-color: none;
+      border: none;
+    }
+  }
+}
+
 // General Classes
 
 .accent{
