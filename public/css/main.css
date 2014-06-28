@@ -140,6 +140,7 @@ input[type="text"]:hover, input[type="number"]:hover, input[type="password"]:hov
 }
 select {
   margin-right: 0.5rem;
+  width: 66rem;
 }
 option {
   margin: 0.4rem;

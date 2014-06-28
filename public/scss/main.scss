@@ -221,6 +221,7 @@ input[type="checkbox"]{
 // Dropdowns
 select{
   margin-right: 0.5rem;
+  width: $form-elements-width + 2rem;
 }
 
 option{
