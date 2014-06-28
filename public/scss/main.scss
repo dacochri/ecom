@@ -155,17 +155,15 @@ header{
   }
 
   a{
-    display: inline-block;
-    background-color: #333;
-    padding: $small - 0.25rem;
+    color: #000;
     text-decoration: none;
 
     &:link, &:visited{
-      color: $main-color;
+      border-bottom: 0.1rem dotted #000;
     }
 
     &:hover, &:active, &:focus{
-      color: #999;
+      border-bottom: 0.1rem solid #000;
     }
   }
 }
@@ -282,13 +280,14 @@ table{
 }
 
 .delete-form{
-  background-color: none;
+  background-color: transparent;
   border: none;
   display: inline;
 
   input[type="submit"]{
-    background-color: none;
+    background-color: transparent;
     border: none;
+    border-bottom: 0.1rem dotted #000;
     transition: none;
     color: #000;
     padding: $small - 0.25rem;
@@ -298,8 +297,8 @@ table{
     display: inline;
     
     &:hover, &:active, &:focus{
-      background-color: none;
-      border: none;
+      background-color: transparent;
+      border-bottom: 0.1rem solid #000;
     }
   }
 }

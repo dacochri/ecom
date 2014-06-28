@@ -105,16 +105,14 @@ header nav ul li:last {
   margin: 0.5rem 0;
 }
 #content a {
-  display: inline-block;
-  background-color: #333;
-  padding: 0.25rem;
+  color: #000;
   text-decoration: none;
 }
 #content a:link, #content a:visited {
-  color: #ffbf00;
+  border-bottom: 0.1rem dotted #000;
 }
 #content a:hover, #content a:active, #content a:focus {
-  color: #999;
+  border-bottom: 0.1rem solid #000;
 }
 form {
   border: 0.1rem solid #aaa;
@@ -186,13 +184,14 @@ table th, table td {
   vertical-align: center;
 }
 .delete-form {
-  background-color: none;
+  background-color: transparent;
   border: none;
   display: inline;
 }
 .delete-form input[type="submit"] {
-  background-color: none;
+  background-color: transparent;
   border: none;
+  border-bottom: 0.1rem dotted #000;
   transition: none;
   color: #000;
   padding: 0.25rem;
@@ -202,8 +201,8 @@ table th, table td {
   display: inline;
 }
 .delete-form input[type="submit"]:hover, .delete-form input[type="submit"]:active, .delete-form input[type="submit"]:focus {
-  background-color: none;
-  border: none;
+  background-color: transparent;
+  border-bottom: 0.1rem solid #000;
 }
 .accent {
   color: #fff;
